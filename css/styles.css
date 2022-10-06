@@ -1,0 +1,161 @@
+:root {
+	font-size: 62.5%;
+
+	--bg-light-mode: #fff;
+	--bg-dark-mode: #121214;
+
+	--bg-card-light-unchecked: #d8d8f071;
+	--bg-card-dark-unchecked: #29292e;
+	--bg-card-checked: #314ba075;
+	--bg-card-hover: #4f63be41;
+
+	--fill-button-dark: #fff;
+
+	--tx-timer-light: #fff;
+	--tx-timer-dark: #323238;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+button {
+	font-family: "Roboto", sans-serif;
+	font-size: 1.6rem;
+	color: var(--tx-timer);
+}
+
+button {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+img {
+	background: transparent;
+}
+
+.hide {
+	display: none;
+}
+
+main {
+	display: grid;
+	place-content: center;
+
+	height: 100vh;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+
+	gap: 19.2rem;
+	width: clamp(50rem, 50rem + 30vw, 82rem);
+}
+
+.timer-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-width: 33rem;
+}
+
+.timer-wrapper span {
+	font-size: 12.6rem;
+}
+
+.controls {
+	display: flex;
+	gap: 4rem;
+}
+
+.controls button {
+	transition: transform 0.3s;
+}
+
+.controls button:hover {
+	transform: scale(1.1, 1.1);
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 3.2rem;
+}
+
+.buttons button {
+	display: grid;
+	place-content: center;
+	gap: 2rem;
+
+	border-radius: 2.4rem;
+
+	padding: 2.4rem;
+	transition: transform 0.3s, background-color 0.4s;
+}
+
+.buttons button:hover {
+	background-color: var(--bg-card-hover) !important;
+	transform: scale(1.05, 1.05);
+}
+
+.buttons button svg {
+	justify-self: center;
+}
+
+.bg-check {
+	background-color: var(--bg-card-checked) !important;
+}
+
+.color-icon-change {
+	fill: #fff;
+}
+
+/* LIGHT & DARK Mode */
+
+.bg-light-mode {
+	background-color: var(--bg-light-mode);
+	color: var(--tx-timer-dark);
+}
+
+.bg-dark-mode {
+	background-color: var(--bg-dark-mode);
+	color: var(--tx-timer-light);
+}
+
+.light-mode-icon {
+	position: absolute;
+	right: 6rem;
+	top: 6rem;
+}
+
+.dark-mode-icon {
+	position: absolute;
+	right: 6rem;
+	top: 6rem;
+}
+
+.bg-button-unchecked-dark {
+	background-color: var(--bg-card-dark-unchecked);
+}
+
+.bg-button-unchecked-light {
+	background-color: var(--bg-card-light-unchecked);
+}
+
+.fill-button-dark {
+	fill: var(--fill-button-dark);
+}
+
+.volume-slider {
+	max-width: 9rem;
+	margin-top: 0;
+	padding: 0;
+	align-self: center;
+}
